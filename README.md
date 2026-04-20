@@ -29,3 +29,4 @@ Repositório de estudos práticos e teóricos baseado no currículo oficial da L
 ## 📚 Referências Rápidas
 - [Documentação Oficial K8s](https://kubernetes.io/docs/)
 - [Cheat Sheet kubectl](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+https://devopsproject.com.br/
