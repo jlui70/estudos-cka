@@ -5,7 +5,7 @@ Repositório de estudos práticos e teóricos baseado no currículo oficial da L
 ## 🚀 Status do Aprendizado
 - [ ] 01. Course Introduction
 - [ ] 02. Basics of Kubernetes
-- [ ] 03. Installation and Configuration
+- [x] 03. Installation and Configuration
 - [ ] 04. Kubernetes Architecture
 - [ ] 05. APIs and Access
 - [ ] 06. API Objects
