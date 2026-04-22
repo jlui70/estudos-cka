@@ -91,7 +91,7 @@ São as máquinas onde as aplicações (Pods) efetivamente rodam. Podem ser fís
 
 ## 4. Componentes Básicos
 
-### 5.1 Pod
+### 4.1 Pod
 
 O **Pod** é a menor unidade do Kubernetes — não é o container em si, mas o **wrapper** ao redor de um ou mais containers.
 
@@ -131,7 +131,7 @@ spec:
     - containerPort: 80
 ```
 
-### 5.2 Node
+### 4.2 Node
 
 Um **Node** é uma máquina (física ou virtual) que faz parte do cluster. Pode ser um Worker Node ou o próprio Control Plane.
 
@@ -151,7 +151,7 @@ kubectl describe node <nome-do-node>
 - **kube-proxy**: Mantém as regras de rede (iptables/ipvs) para os Services
 - **Container Runtime**: Executa os containers (containerd, CRI-O)
 
-### 5.3 Namespace
+### 4.3 Namespace
 
 Namespaces são **partições lógicas** do cluster. Permitem isolar recursos entre times, projetos ou ambientes (dev/staging/prod).
 
@@ -168,7 +168,7 @@ kubectl get pods --namespace kube-system
 kubectl get all -n default
 ```
 
-### 5.4 Cluster
+### 4.4 Cluster
 
 O **Cluster** é o conjunto de todos os nodes (control plane + workers) mais a configuração e o estado armazenado no etcd. É a unidade máxima de gerenciamento do K8s.
 
