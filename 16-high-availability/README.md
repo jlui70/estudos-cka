@@ -3,7 +3,7 @@
 ## Tarefas Críticas de Administração
 
 ### Manutenção de Nós
-```bash
+
 # Esvaziar o nó para manutenção (remove os pods)
 kubectl drain <node-name> --ignore-daemonsets
 
