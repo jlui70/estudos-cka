@@ -1,27 +1,21 @@
-Capítulo 04: Arquitetura do Kubernetes
-Conceitos Chave para o CKA
+# Capítulo 04: Arquitetura do Kubernetes
 
-Control Plane (Cérebro):
+## Conceitos Chave para o CKA
+1. **kube-apiserver:** O único componente que fala com o `etcd`. É a porta de entrada da API.
+2. **etcd:** Banco de dados chave-valor que guarda o estado do cluster. Backup é vital aqui.
+3. **kube-scheduler:** Observa novos Pods e decide em qual Nó eles devem rodar.
+4. **kube-controller-manager:** Executa os loops de controle (Node Controller, Job Controller, etc).
+5. **kubelet:** O "capitão" do nó. Garante que os containers descritos nos PodSpecs estejam rodando.
+6. **kube-proxy:** Mantém as regras de rede nos nós (iptables/IPVS).
 
-kube-apiserver: Único ponto de entrada para gerenciar o cluster.
+## Componentes do Sistema (Static Pods)
+No nosso lab, os componentes do Control Plane rodam como Pods no namespace `kube-system`.
+- Arquivos de manifesto: `/etc/kubernetes/manifests/`
 
-etcd: Banco de dados chave-valor (estado do cluster). Fundamental para backup.
-
-kube-scheduler: Decide em qual nó o Pod vai rodar baseado em recursos.
-
-kube-controller-manager: Garante que o estado desejado seja mantido (Replication, Endpoint, etc).
-
-Worker Nodes (Operários):
-
-kubelet: O agente que garante que os containers estejam rodando no nó.
-
-kube-proxy: Gerencia as regras de rede e comunicação.
-
-Comandos de Diagnóstico
-
-Bash
-# Verificar componentes do sistema
+## Comandos Úteis
+```bash
+# Verificar saúde dos componentes
 kubectl get pods -n kube-system
 
-# Ver logs de um componente específico (ex: api-server)
+# Ver logs do API Server para troubleshoot
 kubectl logs -n kube-system kube-apiserver-control-plane
