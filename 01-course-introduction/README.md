@@ -1,12 +1,12 @@
 # Capítulo 01: Basics of Kubernetes
 
-## Conceitos Chave para o CKA
+## Por que orquestração é necessária?
 1. **O que é o Kubernetes?** Orquestrador de containers baseado em desejos (Desired State).
 2. **Nós (Nodes):** Unidades de computação.
 3. **Control Plane:** O cérebro que decide onde as coisas rodam.
 4. **Data Plane (Worker Nodes):** Onde os containers realmente trabalham.
 
-## Anatomia de um Objeto (YAML)
+## História e Origem
 Todo manifesto que vamos criar no Lab tem 4 campos obrigatórios:
 - `apiVersion`: Versão da API (ex: v1).
 - `kind`: Tipo do objeto (ex: Pod, Service).
