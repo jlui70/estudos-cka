@@ -1,4 +1,4 @@
-# Capítulo 01: Basics of Kubernetes
+# Capítulo 01: Introduction
 
 ## 1. Por que orquestração é necessária?
 
