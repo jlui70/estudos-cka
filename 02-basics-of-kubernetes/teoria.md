@@ -1,4 +1,4 @@
-# Capítulos 1-2 — Introdução e Basics do Kubernetes
+# Capítulo 2 — Basics do Kubernetes
 
 ---
 
