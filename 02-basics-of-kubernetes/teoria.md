@@ -8,35 +8,9 @@ Kubernetes (K8s) é uma plataforma open-source de **orquestração de containers
 
 O nome vem do grego: "timoneiro" ou "piloto de navio". A abreviação **K8s** vem de "K" + 8 letras + "s".
 
-### Por que orquestração é necessária?
-
-Antes do K8s, as empresas rodavam workloads em VMs ou diretamente em servidores físicos. Com a popularização dos containers (Docker, 2013), passou a ser simples empacotar e rodar aplicações de forma isolada. Mas surgiram novos problemas:
-
-| Problema | Sem Orquestração | Com Kubernetes |
-|---|---|---|
-| Container cai | Precisa reiniciar manualmente | Auto-restart via controller |
-| Alta demanda | Scale manual | HorizontalPodAutoscaler |
-| Múltiplos hosts | Deploy manual em cada host | Scheduler distribui automaticamente |
-| Atualização | Downtime ou script customizado | Rolling Update nativo |
-| Service discovery | DNS/arquivo manual | CoreDNS integrado |
-
 ---
 
-## 2. História e Origem
-
-### Linha do tempo
-
-- **2003–2013 — Google Borg**: Sistema interno do Google para orquestrar dezenas de milhares de jobs. Toda a infraestrutura do Google Search, Gmail etc. rodava no Borg. Era proprietário.
-- **2013 — Google Omega**: Segunda geração do Borg, com foco em melhor compartilhamento de recursos. Também proprietário.
-- **Junho 2014 — Kubernetes**: Google anuncia o K8s como projeto open-source, construído com as lições aprendidas no Borg. Lançado no GitHub.
-- **2015 — CNCF**: K8s torna-se o projeto fundador da **Cloud Native Computing Foundation** (CNCF), parte da Linux Foundation.
-- **2016**: K8s supera Docker Swarm e Apache Mesos como padrão de mercado.
-- **2018**: K8s se "gradua" na CNCF — primeiro projeto a atingir esse nível de maturidade.
-- **Hoje**: Mais de 100 versões lançadas, suporte nativo nos três maiores clouds (GKE, EKS, AKS) e em praticamente todos os provedores de cloud.
-
----
-
-## 3. Containers vs VMs — Comparação Teórica
+## 2. Containers vs VMs — Comparação Teórica
 
 Entender por que containers (e não VMs) são a base do K8s é fundamental.
 
@@ -66,7 +40,7 @@ VM                               Container
 
 ---
 
-## 4. Estrutura de um Cluster Kubernetes
+## 3. Estrutura de um Cluster Kubernetes
 
 Um cluster K8s tem dois tipos principais de nós (máquinas):
 
@@ -115,7 +89,7 @@ São as máquinas onde as aplicações (Pods) efetivamente rodam. Podem ser fís
 
 ---
 
-## 5. Componentes Básicos
+## 4. Componentes Básicos
 
 ### 5.1 Pod
 
@@ -200,7 +174,7 @@ O **Cluster** é o conjunto de todos os nodes (control plane + workers) mais a c
 
 ---
 
-## 6. O Modelo Declarativo vs Imperativo
+## 5. O Modelo Declarativo vs Imperativo
 
 ### Imperativo
 Você diz **o que fazer**: "Crie um pod com nginx agora."
@@ -231,7 +205,7 @@ Estado Desejado (YAML) ──→ API Server ──→ etcd (armazena)
 
 ---
 
-## 7. Kubernetes vs Docker Swarm vs Mesos — Comparação
+## 6. Kubernetes vs Docker Swarm vs Mesos — Comparação
 
 | Feature | Kubernetes | Docker Swarm | Apache Mesos |
 |---|---|---|---|
@@ -249,7 +223,7 @@ Estado Desejado (YAML) ──→ API Server ──→ etcd (armazena)
 
 ---
 
-## 8. Conceitos-Chave para Memorizar
+## 7. Conceitos-Chave para Memorizar
 
 | Conceito | Definição em uma linha |
 |---|---|
@@ -266,7 +240,7 @@ Estado Desejado (YAML) ──→ API Server ──→ etcd (armazena)
 
 ---
 
-## 9. Resumo do Fluxo Básico
+## 8. Resumo do Fluxo Básico
 
 ```
 Developer               Kubernetes
