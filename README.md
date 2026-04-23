@@ -3,8 +3,8 @@
 Repositório de estudos práticos e teóricos baseado no currículo oficial da Linux Foundation (Abril 2026).
 
 ## 🚀 Status do Aprendizado
-- [ ] 01. Course Introduction
-- [ ] 02. Basics of Kubernetes
+- [x] 01. Course Introduction
+- [x] 02. Basics of Kubernetes
 - [x] 03. Installation and Configuration
 - [ ] 04. Kubernetes Architecture
 - [ ] 05. APIs and Access
