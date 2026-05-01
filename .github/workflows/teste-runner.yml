@@ -1,0 +1,19 @@
+name: Testando meu Runner Local
+
+on:
+  push:
+    branches: [ "main" ]  # Ou "master", dependendo do nome da sua branch
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executando um comando na minha máquina
+        run: |
+          echo "Opa! O comando rodou no meu terminal!"
+          uptime
+          ls -l
