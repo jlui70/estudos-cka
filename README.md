@@ -1,4 +1,4 @@
-# ☸️ Preparação Certificação CKA - Luiz Antonio - Devopsproject
+# ☸️ Preparação Certificação CKA - Luiz Antonio - Devopsproject - 2026
 
 Repositório de estudos práticos e teóricos baseado no currículo oficial da Linux Foundation (2026).
 

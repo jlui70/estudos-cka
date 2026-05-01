@@ -1,19 +1,22 @@
-name: Testando meu Runner Local
+name: K8s Cluster Audit
 
 on:
   push:
-    branches: [ "main" ]  # Ou "master", dependendo do nome da sua branch
+    branches: [ "main" ]
 
 jobs:
-  build:
+  k8s-check:
     runs-on: self-hosted
-
     steps:
-      - name: Checkout do código
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Executando um comando na minha máquina
+      - name: List Cluster Nodes
         run: |
-          echo "Opa! O comando rodou no meu terminal!"
-          uptime
-          ls -l
+          echo "Verificando nós do cluster..."
+          kubectl get nodes -o wide
+          
+      - name: Check Resource Usage
+        run: |
+          echo "Uso de recursos no namespace default:"
+          kubectl top pods || echo "Metrics Server não instalado"
