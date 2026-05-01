@@ -1,12 +1,12 @@
 # ☸️ Preparação Certificação CKA - Luiz Antonio - Devopsproject
 
-Repositório de estudos práticos e teóricos baseado no currículo oficial da Linux Foundation (Abril 2026).
+Repositório de estudos práticos e teóricos baseado no currículo oficial da Linux Foundation (2026).
 
 ## 🚀 Status do Aprendizado
 - [x] 01. Course Introduction
 - [x] 02. Basics of Kubernetes
 - [x] 03. Installation and Configuration
-- [ ] 04. Kubernetes Architecture
+- [x] 04. Kubernetes Architecture
 - [ ] 05. APIs and Access
 - [ ] 06. API Objects
 - [ ] 07. Managing State with Deployments
